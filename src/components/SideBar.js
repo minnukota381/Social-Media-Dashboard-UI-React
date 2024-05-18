@@ -1,7 +1,8 @@
 // components/Sidebar.js
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { FaHome, FaUsers, FaCalendarPlus, FaChartBar } from 'react-icons/fa';
+import './styles.css';
 
 function Sidebar() {
   return (
@@ -11,28 +12,28 @@ function Sidebar() {
       </div>
       <ul className="nav flex-column">
         <li className="nav-item">
-          <Link className="nav-link" to="/">
+          <NavLink className="nav-link" to="/" exact activeClassName="active">
             <FaHome className="mr-2" />
             <span>Dashboard</span>
-          </Link>
+          </NavLink>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/accounts">
+          <NavLink className="nav-link" to="/accounts" activeClassName="active">
             <FaUsers className="mr-2" />
             <span>Accounts</span>
-          </Link>
+          </NavLink>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/scheduler">
+          <NavLink className="nav-link" to="/scheduler" activeClassName="active">
             <FaCalendarPlus className="mr-2" />
             <span>Post Scheduler</span>
-          </Link>
+          </NavLink>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/analytics">
+          <NavLink className="nav-link" to="/analytics" activeClassName="active">
             <FaChartBar className="mr-2" />
             <span>Analytics</span>
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </div>

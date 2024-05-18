@@ -24,3 +24,16 @@
   color: #ffc107;
   transform: translateX(5px);
 }
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.rounded-pill {
+  border-radius: 1.5rem;
+}
+
+.shadow-sm {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+

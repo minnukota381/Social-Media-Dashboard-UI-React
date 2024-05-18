@@ -1,0 +1,84 @@
+/* styles.css */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+}
+
+.container-fluid {
+  padding: 20px;
+}
+
+.sidebar {
+  background-color: #343a40;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.sidebar-header {
+  padding: 20px;
+  text-align: center;
+  background-color: #212529;
+}
+
+.nav-link {
+  color: #adb5bd;
+  padding: 15px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-link:hover {
+  background-color: #495057;
+  color: #fff;
+}
+
+.nav-link.active {
+  background-color: #495057;
+  color: #fff;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card .card-title {
+  display: flex;
+  align-items: center;
+}
+
+.card .card-title svg {
+  margin-right: 10px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-text {
+  font-size: 1.2em;
+  margin-bottom: 0;
+}
+
+.card .badge {
+  font-size: 0.9em;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.custom-control-label::before,
+.custom-control-label::after {
+  top: 0.2rem;
+  width: 1.25rem;
+  height: 1.25rem;
+}
