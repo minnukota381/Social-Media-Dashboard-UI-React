@@ -1,5 +1,6 @@
 // components/PostScheduler.js
 import React, { useState } from 'react';
+import { Form, FormGroup, Label, Input, Button, Row, Col } from 'reactstrap';
 
 function PostScheduler() {
   const [post, setPost] = useState({
@@ -19,36 +20,42 @@ function PostScheduler() {
   };
 
   return (
-    <div className="container mt-4">
-      <h2>Schedule a Post</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <textarea
-            className="form-control"
-            rows="3"
-            placeholder="Enter your post content"
+    <div className="container-fluid p-4">
+      <h1 className="mb-4">Schedule a Post</h1>
+      <Form onSubmit={handleSubmit}>
+        <FormGroup>
+          <Label for="postContent">Post Content</Label>
+          <Input
+            type="textarea"
             name="content"
+            id="postContent"
             value={post.content}
             onChange={handleChange}
-          ></textarea>
-        </div>
-        <div className="form-group">
-          <input
-            type="datetime-local"
-            className="form-control"
-            name="scheduledTime"
-            value={post.scheduledTime}
-            onChange={handleChange}
+            rows="3"
           />
-        </div>
-        <div className="form-group">
-          <label>Select accounts:</label>
-          {/* Add checkboxes or dropdown for account selection */}
-        </div>
-        <button type="submit" className="btn btn-primary">
-          Schedule Post
-        </button>
-      </form>
+        </FormGroup>
+        <Row>
+          <Col md={6}>
+            <FormGroup>
+              <Label for="scheduledTime">Scheduled Time</Label>
+              <Input
+                type="datetime-local"
+                name="scheduledTime"
+                id="scheduledTime"
+                value={post.scheduledTime}
+                onChange={handleChange}
+              />
+            </FormGroup>
+          </Col>
+          <Col md={6}>
+            <FormGroup>
+              <Label>Select Accounts</Label>
+              {/* Add checkboxes or dropdown for account selection */}
+            </FormGroup>
+          </Col>
+        </Row>
+        <Button color="primary" type="submit">Schedule Post</Button>
+      </Form>
     </div>
   );
 }
