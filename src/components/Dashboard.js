@@ -1,47 +1,40 @@
 // components/Dashboard.js
 import React from 'react';
 import { Card, CardBody, CardTitle, CardText, Row, Col, Badge } from 'reactstrap';
-import { FaUserFriends, FaRegCommentDots, FaHeart, FaRetweet } from 'react-icons/fa';
-import { Line } from 'react-chartjs-2';
-import Chart from 'chart.js/auto';
-
-const engagementData = {
-  labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
-  datasets: [
-    {
-      label: 'Engagement',
-      data: [1200, 1900, 3000, 1700, 2800, 2400, 700],
-      fill: false,
-      borderColor: 'rgba(75,192,192,1)',
-    },
-  ],
-};
+import { FaUserFriends, FaRegCommentDots, FaHeart, FaRetweet, FaUserPlus, FaFacebookSquare, FaLinkedin } from 'react-icons/fa';
+import './styles.css';
 
 function Dashboard() {
   return (
     <div className="container-fluid p-4">
-      <h1 className="mb-4 text-primary">Dashboard</h1>
+      <h1 className="mb-4">
+        <FaFacebookSquare className="mr-2" />
+        Dashboard
+      </h1>
       <Row>
-        <Col md={3}>
-          <Card className="text-white bg-primary mb-4">
+        <Col xs={12} sm={6} md={3}>
+          <Card className="text-white mb-4 card-custom">
             <CardBody>
               <div className="d-flex justify-content-between align-items-center">
                 <div>
                   <CardTitle tag="h5">
                     <FaUserFriends className="mr-2" />
-                    Total Accounts
+                    Followers
                   </CardTitle>
-                  <CardText>8</CardText>
+                  <CardText>
+                    <FaUserPlus className="mr-2" />
+                    8
+                  </CardText>
                 </div>
-                <Badge pill color="light" className="text-primary">
+                <Badge pill color="light" className="text-dark">
                   +2
                 </Badge>
               </div>
             </CardBody>
           </Card>
         </Col>
-        <Col md={3}>
-          <Card className="text-white bg-success mb-4">
+        <Col xs={12} sm={6} md={3}>
+          <Card className="text-white mb-4 card-custom">
             <CardBody>
               <div className="d-flex justify-content-between align-items-center">
                 <div>
@@ -49,17 +42,20 @@ function Dashboard() {
                     <FaRegCommentDots className="mr-2" />
                     Total Posts
                   </CardTitle>
-                  <CardText>452</CardText>
+                  <CardText>
+                    <FaUserPlus className="mr-2" />
+                    452
+                  </CardText>
                 </div>
-                <Badge pill color="light" className="text-success">
+                <Badge pill color="light" className="text-primary">
                   +24
                 </Badge>
               </div>
             </CardBody>
           </Card>
         </Col>
-        <Col md={3}>
-          <Card className="text-white bg-danger mb-4">
+        <Col xs={12} sm={6} md={3}>
+          <Card className="text-white mb-4 card-custom">
             <CardBody>
               <div className="d-flex justify-content-between align-items-center">
                 <div>
@@ -67,7 +63,10 @@ function Dashboard() {
                     <FaHeart className="mr-2" />
                     Total Engagement
                   </CardTitle>
-                  <CardText>24,568</CardText>
+                  <CardText>
+                    <FaUserPlus className="mr-2" />
+                    24,568
+                  </CardText>
                 </div>
                 <Badge pill color="light" className="text-danger">
                   +1.2k
@@ -76,8 +75,8 @@ function Dashboard() {
             </CardBody>
           </Card>
         </Col>
-        <Col md={3}>
-          <Card className="text-white bg-info mb-4">
+        <Col xs={12} sm={6} md={3}>
+          <Card className="text-white mb-4 card-custom">
             <CardBody>
               <div className="d-flex justify-content-between align-items-center">
                 <div>
@@ -85,7 +84,10 @@ function Dashboard() {
                     <FaRetweet className="mr-2" />
                     Total Shares
                   </CardTitle>
-                  <CardText>1,234</CardText>
+                  <CardText>
+                    <FaUserPlus className="mr-2" />
+                    1,234
+                  </CardText>
                 </div>
                 <Badge pill color="light" className="text-info">
                   +100
@@ -95,12 +97,272 @@ function Dashboard() {
           </Card>
         </Col>
       </Row>
-      <Card className="mb-4">
-        <CardBody>
-          <CardTitle tag="h5">Engagement Over Time</CardTitle>
-          <Line data={engagementData} />
-        </CardBody>
-      </Card>
+
+      <h1 className="mb-4">
+        <FaLinkedin className="mr-2" />
+        LinkedIn
+      </h1>
+      <Row>
+        <Col xs={12} sm={6} md={3}>
+          <Card className="text-white mb-4 card-custom">
+            <CardBody>
+              <div className="d-flex justify-content-between align-items-center">
+                <div>
+                  <CardTitle tag="h5">
+                    <FaUserFriends className="mr-2" />
+                    Followers
+                  </CardTitle>
+                  <CardText>
+                    <FaUserPlus className="mr-2" />
+                    8
+                  </CardText>
+                </div>
+                <Badge pill color="light" className="text-dark">
+                  +2
+                </Badge>
+              </div>
+            </CardBody>
+          </Card>
+        </Col>
+        <Col xs={12} sm={6} md={3}>
+          <Card className="text-white mb-4 card-custom">
+            <CardBody>
+              <div className="d-flex justify-content-between align-items-center">
+                <div>
+                  <CardTitle tag="h5">
+                    <FaRegCommentDots className="mr-2" />
+                    Total Posts
+                  </CardTitle>
+                  <CardText>
+                    <FaUserPlus className="mr-2" />
+                    452
+                  </CardText>
+                </div>
+                <Badge pill color="light" className="text-primary">
+                  +24
+                </Badge>
+              </div>
+            </CardBody>
+          </Card>
+        </Col>
+        <Col xs={12} sm={6} md={3}>
+          <Card className="text-white mb-4 card-custom">
+            <CardBody>
+              <div className="d-flex justify-content-between align-items-center">
+                <div>
+                  <CardTitle tag="h5">
+                    <FaHeart className="mr-2" />
+                    Total Engagement
+                  </CardTitle>
+                  <CardText>
+                    <FaUserPlus className="mr-2" />
+                    24,568
+                  </CardText>
+                </div>
+                <Badge pill color="light" className="text-danger">
+                  +1.2k
+                </Badge>
+              </div>
+            </CardBody>
+          </Card>
+        </Col>
+        <Col xs={12} sm={6} md={3}>
+          <Card className="text-white mb-4 card-custom">
+            <CardBody>
+              <div className="d-flex justify-content-between align-items-center">
+                <div>
+                  <CardTitle tag="h5">
+                    <FaRetweet className="mr-2" />
+                    Total Shares
+                  </CardTitle>
+                  <CardText>
+                    <FaUserPlus className="mr-2" />
+                    1,234
+                  </CardText>
+                </div>
+                <Badge pill color="light" className="text-info">
+                  +100
+                </Badge>
+              </div>
+            </CardBody>
+          </Card>
+        </Col>
+      </Row>
+      <h1 className="mb-4 text-primary">Dashboard</h1>
+      <Row>
+        <Col xs={12} sm={6} md={3}>
+          <Card className="text-white mb-4 card-custom">
+            <CardBody>
+              <div className="d-flex justify-content-between align-items-center">
+                <div>
+                  <CardTitle tag="h5">
+                    <FaUserFriends className="mr-2" />
+                    Followers
+                  </CardTitle>
+                  <CardText>
+                    <FaUserPlus className="mr-2" />
+                    8
+                  </CardText>
+                </div>
+                <Badge pill color="light" className="text-dark">
+                  +2
+                </Badge>
+              </div>
+            </CardBody>
+          </Card>
+        </Col>
+        <Col xs={12} sm={6} md={3}>
+          <Card className="text-white mb-4 card-custom">
+            <CardBody>
+              <div className="d-flex justify-content-between align-items-center">
+                <div>
+                  <CardTitle tag="h5">
+                    <FaRegCommentDots className="mr-2" />
+                    Total Posts
+                  </CardTitle>
+                  <CardText>
+                    <FaUserPlus className="mr-2" />
+                    452
+                  </CardText>
+                </div>
+                <Badge pill color="light" className="text-primary">
+                  +24
+                </Badge>
+              </div>
+            </CardBody>
+          </Card>
+        </Col>
+        <Col xs={12} sm={6} md={3}>
+          <Card className="text-white mb-4 card-custom">
+            <CardBody>
+              <div className="d-flex justify-content-between align-items-center">
+                <div>
+                  <CardTitle tag="h5">
+                    <FaHeart className="mr-2" />
+                    Total Engagement
+                  </CardTitle>
+                  <CardText>
+                    <FaUserPlus className="mr-2" />
+                    24,568
+                  </CardText>
+                </div>
+                <Badge pill color="light" className="text-danger">
+                  +1.2k
+                </Badge>
+              </div>
+            </CardBody>
+          </Card>
+        </Col>
+        <Col xs={12} sm={6} md={3}>
+          <Card className="text-white mb-4 card-custom">
+            <CardBody>
+              <div className="d-flex justify-content-between align-items-center">
+                <div>
+                  <CardTitle tag="h5">
+                    <FaRetweet className="mr-2" />
+                    Total Shares
+                  </CardTitle>
+                  <CardText>
+                    <FaUserPlus className="mr-2" />
+                    1,234
+                  </CardText>
+                </div>
+                <Badge pill color="light" className="text-info">
+                  +100
+                </Badge>
+              </div>
+            </CardBody>
+          </Card>
+        </Col>
+      </Row>
+      <h1 className="mb-4 text-primary">Dashboard</h1>
+      <Row>
+        <Col xs={12} sm={6} md={3}>
+          <Card className="text-white mb-4 card-custom">
+            <CardBody>
+              <div className="d-flex justify-content-between align-items-center">
+                <div>
+                  <CardTitle tag="h5">
+                    <FaUserFriends className="mr-2" />
+                    Followers
+                  </CardTitle>
+                  <CardText>
+                    <FaUserPlus className="mr-2" />
+                    8
+                  </CardText>
+                </div>
+                <Badge pill color="light" className="text-dark">
+                  +2
+                </Badge>
+              </div>
+            </CardBody>
+          </Card>
+        </Col>
+        <Col xs={12} sm={6} md={3}>
+          <Card className="text-white mb-4 card-custom">
+            <CardBody>
+              <div className="d-flex justify-content-between align-items-center">
+                <div>
+                  <CardTitle tag="h5">
+                    <FaRegCommentDots className="mr-2" />
+                    Total Posts
+                  </CardTitle>
+                  <CardText>
+                    <FaUserPlus className="mr-2" />
+                    452
+                  </CardText>
+                </div>
+                <Badge pill color="light" className="text-primary">
+                  +24
+                </Badge>
+              </div>
+            </CardBody>
+          </Card>
+        </Col>
+        <Col xs={12} sm={6} md={3}>
+          <Card className="text-white mb-4 card-custom">
+            <CardBody>
+              <div className="d-flex justify-content-between align-items-center">
+                <div>
+                  <CardTitle tag="h5">
+                    <FaHeart className="mr-2" />
+                    Total Engagement
+                  </CardTitle>
+                  <CardText>
+                    <FaUserPlus className="mr-2" />
+                    24,568
+                  </CardText>
+                </div>
+                <Badge pill color="light" className="text-danger">
+                  +1.2k
+                </Badge>
+              </div>
+            </CardBody>
+          </Card>
+        </Col>
+        <Col xs={12} sm={6} md={3}>
+          <Card className="text-white mb-4 card-custom">
+            <CardBody>
+              <div className="d-flex justify-content-between align-items-center">
+                <div>
+                  <CardTitle tag="h5">
+                    <FaRetweet className="mr-2" />
+                    Total Shares
+                  </CardTitle>
+                  <CardText>
+                    <FaUserPlus className="mr-2" />
+                    1,234
+                  </CardText>
+                </div>
+                <Badge pill color="light" className="text-info">
+                  +100
+                </Badge>
+              </div>
+            </CardBody>
+          </Card>
+        </Col>
+      </Row>
+      
     </div>
   );
 }

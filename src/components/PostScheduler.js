@@ -4,7 +4,7 @@ import { Card, CardBody, CardTitle, Form, FormGroup, Label, Input, Button, Row, 
 import { FaInstagram, FaTwitter, FaFacebook, FaLinkedin, FaRegCalendarAlt } from 'react-icons/fa';
 import './styles.css';
 
-function PostScheduler() {
+const PostScheduler = () => {
   const [post, setPost] = useState({ content: '', scheduledTime: '', accounts: [] });
 
   const handleChange = (e) => {
@@ -28,10 +28,10 @@ function PostScheduler() {
   };
 
   return (
-    <div className="container-fluid p-4">
-      <Card className="shadow-sm">
+    <div className="container-fluid">
+      <Card className="shadow p-4">
         <CardBody>
-          <CardTitle>
+          <CardTitle className="mb-4">
             <FaRegCalendarAlt className="mr-2" />
             Schedule a Post
           </CardTitle>
@@ -44,14 +44,14 @@ function PostScheduler() {
                 id="postContent"
                 value={post.content}
                 onChange={handleChange}
-                rows="3"
+                rows="5"
                 placeholder="Write your post content here..."
                 className="rounded-lg"
               />
             </FormGroup>
-            <Row>
-              <Col md={6}>
-                <FormGroup>
+            <FormGroup>
+              <Row>
+                <Col md={6}>
                   <Label for="scheduledTime">
                     <FaRegCalendarAlt className="mr-2" />
                     Scheduled Time
@@ -64,77 +64,44 @@ function PostScheduler() {
                     onChange={handleChange}
                     className="rounded-lg"
                   />
-                </FormGroup>
-              </Col>
-              <Col md={6}>
-                <FormGroup>
+                </Col>
+                <Col md={6}>
                   <Label>
-                    <FaInstagram className="mr-2" />
-                    <FaTwitter className="mr-2" />
-                    <FaFacebook className="mr-2" />
-                    <FaLinkedin className="mr-2" />
                     Select Accounts
                   </Label>
-                  <div className="d-flex">
-                    <div className="custom-control custom-checkbox mr-3">
-                      <input
-                        type="checkbox"
-                        className="custom-control-input"
-                        id="instagramCheck"
-                        checked={post.accounts.includes('instagram')}
-                        onChange={handleAccountChange}
-                      />
-                      <label className="custom-control-label" htmlFor="instagramCheck">
-                        Instagram
-                      </label>
-                    </div>
-                    <div className="custom-control custom-checkbox mr-3">
-                      <input
-                        type="checkbox"
-                        className="custom-control-input"
-                        id="twitterCheck"
-                        checked={post.accounts.includes('twitter')}
-                        onChange={handleAccountChange}
-                      />
-                      <label className="custom-control-label" htmlFor="twitterCheck">
-                        Twitter
-                      </label>
-                    </div>
-                    <div className="custom-control custom-checkbox mr-3">
-                      <input
-                        type="checkbox"
-                        className="custom-control-input"
-                        id="facebookCheck"
-                        checked={post.accounts.includes('facebook')}
-                        onChange={handleAccountChange}
-                      />
-                      <label className="custom-control-label" htmlFor="facebookCheck">
-                        Facebook
-                      </label>
-                    </div>
-                    <div className="custom-control custom-checkbox">
-                      <input
-                        type="checkbox"
-                        className="custom-control-input"
-                        id="linkedinCheck"
-                        checked={post.accounts.includes('linkedin')}
-                        onChange={handleAccountChange}
-                      />
-                      <label className="custom-control-label" htmlFor="linkedinCheck">
-                        LinkedIn
-                      </label>
-                    </div>
+                  <div className="d-flex flex-wrap align-items-center">
+                    <CheckboxWithLabel id="instagramCheck" label="Instagram" icon={<FaInstagram />} checked={post.accounts.includes('instagram')} onChange={handleAccountChange} />
+                    <CheckboxWithLabel id="twitterCheck" label="Twitter" icon={<FaTwitter />} checked={post.accounts.includes('twitter')} onChange={handleAccountChange} />
+                    <CheckboxWithLabel id="facebookCheck" label="Facebook" icon={<FaFacebook />} checked={post.accounts.includes('facebook')} onChange={handleAccountChange} />
+                    <CheckboxWithLabel id="linkedinCheck" label="LinkedIn" icon={<FaLinkedin />} checked={post.accounts.includes('linkedin')} onChange={handleAccountChange} />
                   </div>
-                </FormGroup>
-              </Col>
-            </Row>
-            <Button color="primary" type="submit" className="rounded-pill">
+                </Col>
+              </Row>
+            </FormGroup>
+            <Button color="primary" type="submit" className="rounded-pill mt-3">
               <FaRegCalendarAlt className="mr-2" />
               Schedule Post
             </Button>
           </Form>
         </CardBody>
       </Card>
+    </div>
+  );
+}
+
+const CheckboxWithLabel = ({ id, label, icon, checked, onChange }) => {
+  return (
+    <div className="custom-control custom-checkbox mr-3 mb-2">
+      <input
+        type="checkbox"
+        className="custom-control-input"
+        id={id}
+        checked={checked}
+        onChange={onChange}
+      />
+      <label className="custom-control-label" htmlFor={id}>
+        {icon} {label}
+      </label>
     </div>
   );
 }
