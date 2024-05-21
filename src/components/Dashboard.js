@@ -4,284 +4,77 @@ import { Card, CardBody, CardTitle, CardText, Row, Col, Badge } from 'reactstrap
 import { FaUserFriends, FaRegCommentDots, FaHeart, FaRetweet, FaUserPlus, FaFacebookSquare, FaLinkedin, FaYoutube } from 'react-icons/fa';
 import './styles.css';
 
+const SocialCard = ({ icon, title, value, growth, growthColor }) => (
+  <Card className="text-white mb-4 card-custom">
+    <CardBody>
+      <div className="d-flex justify-content-between align-items-center">
+        <div>
+          <CardTitle tag="h5">
+            {icon}
+            {title}
+          </CardTitle>
+          <CardText>
+            <FaUserPlus className="mr-2" />
+            {value}
+          </CardText>
+        </div>
+        <Badge pill color="light" className={`text-${growthColor}`}>
+          {growth}
+        </Badge>
+      </div>
+    </CardBody>
+  </Card>
+);
+
+const SocialSection = ({ platform, icon, cards }) => (
+  <>
+    <h1 className="mb-4 text-primary">
+      {icon}
+      {platform}
+    </h1>
+    <Row>
+      {cards.map((card, index) => (
+        <Col key={index} xs={12} sm={6} md={3}>
+          <SocialCard
+            icon={card.icon}
+            title={card.title}
+            value={card.value}
+            growth={card.growth}
+            growthColor={card.growthColor}
+          />
+        </Col>
+      ))}
+    </Row>
+  </>
+);
+
 function Dashboard() {
+  const facebookCards = [
+    { icon: <FaUserFriends className="mr-2" />, title: 'Followers', value: '8,000', growth: '+200', growthColor: 'dark' },
+    { icon: <FaRegCommentDots className="mr-2" />, title: 'Posts', value: '452', growth: '+24', growthColor: 'primary' },
+    { icon: <FaHeart className="mr-2" />, title: 'Engagements', value: '24,568', growth: '+1.2k', growthColor: 'danger' },
+    { icon: <FaRetweet className="mr-2" />, title: 'Shares', value: '1,234', growth: '+100', growthColor: 'info' },
+  ];
+
+  const linkedInCards = [
+    { icon: <FaUserFriends className="mr-2" />, title: 'Connections', value: '5,000', growth: '+150', growthColor: 'dark' },
+    { icon: <FaRegCommentDots className="mr-2" />, title: 'Posts', value: '120', growth: '+12', growthColor: 'primary' },
+    { icon: <FaHeart className="mr-2" />, title: 'Likes', value: '15,300', growth: '+1.1k', growthColor: 'danger' },
+    { icon: <FaRetweet className="mr-2" />, title: 'Shares', value: '800', growth: '+50', growthColor: 'info' },
+  ];
+
+  const youtubeCards = [
+    { icon: <FaUserFriends className="mr-2" />, title: 'Subscribers', value: '10,000', growth: '+500', growthColor: 'dark' },
+    { icon: <FaRegCommentDots className="mr-2" />, title: 'Videos', value: '320', growth: '+15', growthColor: 'primary' },
+    { icon: <FaHeart className="mr-2" />, title: 'Likes', value: '50,000', growth: '+2.5k', growthColor: 'danger' },
+    { icon: <FaRetweet className="mr-2" />, title: 'Shares', value: '4,000', growth: '+200', growthColor: 'info' },
+  ];
+
   return (
     <div className="container-fluid p-4">
-      {/* Facebook Section */}
-      <h1 className="mb-4 text-primary">
-        <FaFacebookSquare className="mr-2" />
-        Facebook
-      </h1>
-      <Row>
-        <Col xs={12} sm={6} md={3}>
-          <Card className="text-white mb-4 card-custom">
-            <CardBody>
-              <div className="d-flex justify-content-between align-items-center">
-                <div>
-                  <CardTitle tag="h5">
-                    <FaUserFriends className="mr-2" />
-                    Followers
-                  </CardTitle>
-                  <CardText>
-                    <FaUserPlus className="mr-2" />
-                    8,000
-                  </CardText>
-                </div>
-                <Badge pill color="light" className="text-dark">
-                  +200
-                </Badge>
-              </div>
-            </CardBody>
-          </Card>
-        </Col>
-        <Col xs={12} sm={6} md={3}>
-          <Card className="text-white mb-4 card-custom">
-            <CardBody>
-              <div className="d-flex justify-content-between align-items-center">
-                <div>
-                  <CardTitle tag="h5">
-                    <FaRegCommentDots className="mr-2" />
-                    Posts
-                  </CardTitle>
-                  <CardText>
-                    <FaUserPlus className="mr-2" />
-                    452
-                  </CardText>
-                </div>
-                <Badge pill color="light" className="text-primary">
-                  +24
-                </Badge>
-              </div>
-            </CardBody>
-          </Card>
-        </Col>
-        <Col xs={12} sm={6} md={3}>
-          <Card className="text-white mb-4 card-custom">
-            <CardBody>
-              <div className="d-flex justify-content-between align-items-center">
-                <div>
-                  <CardTitle tag="h5">
-                    <FaHeart className="mr-2" />
-                    Engagements
-                  </CardTitle>
-                  <CardText>
-                    <FaUserPlus className="mr-2" />
-                    24,568
-                  </CardText>
-                </div>
-                <Badge pill color="light" className="text-danger">
-                  +1.2k
-                </Badge>
-              </div>
-            </CardBody>
-          </Card>
-        </Col>
-        <Col xs={12} sm={6} md={3}>
-          <Card className="text-white mb-4 card-custom">
-            <CardBody>
-              <div className="d-flex justify-content-between align-items-center">
-                <div>
-                  <CardTitle tag="h5">
-                    <FaRetweet className="mr-2" />
-                    Shares
-                  </CardTitle>
-                  <CardText>
-                    <FaUserPlus className="mr-2" />
-                    1,234
-                  </CardText>
-                </div>
-                <Badge pill color="light" className="text-info">
-                  +100
-                </Badge>
-              </div>
-            </CardBody>
-          </Card>
-        </Col>
-      </Row>
-
-      {/* LinkedIn Section */}
-      <h1 className="mb-4 text-primary">
-        <FaLinkedin className="mr-2" />
-        LinkedIn
-      </h1>
-      <Row>
-        <Col xs={12} sm={6} md={3}>
-          <Card className="text-white mb-4 card-custom">
-            <CardBody>
-              <div className="d-flex justify-content-between align-items-center">
-                <div>
-                  <CardTitle tag="h5">
-                    <FaUserFriends className="mr-2" />
-                    Connections
-                  </CardTitle>
-                  <CardText>
-                    <FaUserPlus className="mr-2" />
-                    5,000
-                  </CardText>
-                </div>
-                <Badge pill color="light" className="text-dark">
-                  +150
-                </Badge>
-              </div>
-            </CardBody>
-          </Card>
-        </Col>
-        <Col xs={12} sm={6} md={3}>
-          <Card className="text-white mb-4 card-custom">
-            <CardBody>
-              <div className="d-flex justify-content-between align-items-center">
-                <div>
-                  <CardTitle tag="h5">
-                    <FaRegCommentDots className="mr-2" />
-                    Posts
-                  </CardTitle>
-                  <CardText>
-                    <FaUserPlus className="mr-2" />
-                    120
-                  </CardText>
-                </div>
-                <Badge pill color="light" className="text-primary">
-                  +12
-                </Badge>
-              </div>
-            </CardBody>
-          </Card>
-        </Col>
-        <Col xs={12} sm={6} md={3}>
-          <Card className="text-white mb-4 card-custom">
-            <CardBody>
-              <div className="d-flex justify-content-between align-items-center">
-                <div>
-                  <CardTitle tag="h5">
-                    <FaHeart className="mr-2" />
-                    Likes
-                  </CardTitle>
-                  <CardText>
-                    <FaUserPlus className="mr-2" />
-                    15,300
-                  </CardText>
-                </div>
-                <Badge pill color="light" className="text-danger">
-                  +1.1k
-                </Badge>
-              </div>
-            </CardBody>
-          </Card>
-        </Col>
-        <Col xs={12} sm={6} md={3}>
-          <Card className="text-white mb-4 card-custom">
-            <CardBody>
-              <div className="d-flex justify-content-between align-items-center">
-                <div>
-                  <CardTitle tag="h5">
-                    <FaRetweet className="mr-2" />
-                    Shares
-                  </CardTitle>
-                  <CardText>
-                    <FaUserPlus className="mr-2" />
-                    800
-                  </CardText>
-                </div>
-                <Badge pill color="light" className="text-info">
-                  +50
-                </Badge>
-              </div>
-            </CardBody>
-          </Card>
-        </Col>
-      </Row>
-
-      {/* YouTube Section */}
-      <h1 className="mb-4 text-primary">
-        <FaYoutube className="mr-2" />
-        YouTube
-      </h1>
-      <Row>
-        <Col xs={12} sm={6} md={3}>
-          <Card className="text-white mb-4 card-custom">
-            <CardBody>
-              <div className="d-flex justify-content-between align-items-center">
-                <div>
-                  <CardTitle tag="h5">
-                    <FaUserFriends className="mr-2" />
-                    Subscribers
-                  </CardTitle>
-                  <CardText>
-                    <FaUserPlus className="mr-2" />
-                    10,000
-                  </CardText>
-                </div>
-                <Badge pill color="light" className="text-dark">
-                  +500
-                </Badge>
-              </div>
-            </CardBody>
-          </Card>
-        </Col>
-        <Col xs={12} sm={6} md={3}>
-          <Card className="text-white mb-4 card-custom">
-            <CardBody>
-              <div className="d-flex justify-content-between align-items-center">
-                <div>
-                  <CardTitle tag="h5">
-                    <FaRegCommentDots className="mr-2" />
-                    Videos
-                  </CardTitle>
-                  <CardText>
-                    <FaUserPlus className="mr-2" />
-                    320
-                  </CardText>
-                </div>
-                <Badge pill color="light" className="text-primary">
-                  +15
-                </Badge>
-              </div>
-            </CardBody>
-          </Card>
-        </Col>
-        <Col xs={12} sm={6} md={3}>
-          <Card className="text-white mb-4 card-custom">
-            <CardBody>
-              <div className="d-flex justify-content-between align-items-center">
-                <div>
-                  <CardTitle tag="h5">
-                    <FaHeart className="mr-2" />
-                    Likes
-                  </CardTitle>
-                  <CardText>
-                    <FaUserPlus className="mr-2" />
-                    50,000
-                  </CardText>
-                </div>
-                <Badge pill color="light" className="text-danger">
-                  +2.5k
-                </Badge>
-              </div>
-            </CardBody>
-          </Card>
-        </Col>
-        <Col xs={12} sm={6} md={3}>
-          <Card className="text-white mb-4 card-custom">
-            <CardBody>
-              <div className="d-flex justify-content-between align-items-center">
-                <div>
-                  <CardTitle tag="h5">
-                    <FaRetweet className="mr-2" />
-                    Shares
-                  </CardTitle>
-                  <CardText>
-                    <FaUserPlus className="mr-2" />
-                    4,000
-                  </CardText>
-                </div>
-                <Badge pill color="light" className="text-info">
-                  +200
-                </Badge>
-              </div>
-            </CardBody>
-          </Card>
-        </Col>
-      </Row>
+      <SocialSection platform="Facebook" icon={<FaFacebookSquare className="mr-2" />} cards={facebookCards} />
+      <SocialSection platform="LinkedIn" icon={<FaLinkedin className="mr-2" />} cards={linkedInCards} />
+      <SocialSection platform="YouTube" icon={<FaYoutube className="mr-2" />} cards={youtubeCards} />
     </div>
   );
 }

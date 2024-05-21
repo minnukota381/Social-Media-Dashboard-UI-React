@@ -23,24 +23,24 @@ function SocialAccounts() {
 
   return (
     <div className="container-fluid p-4">
-      <h1 className="mb-4 text-primary">Connected Accounts</h1>
+      <h1 className="mb-4 text-primary text-center">Connected Accounts</h1>
       <Row>
         {accounts.map((account) => (
           <Col key={account.id} xs={12} sm={6} md={4} lg={3} className="mb-4">
-            <Card className="h-100 text-white card-custom">
+            <Card className="h-100 text-white card-custom hover-effect">
               <CardBody className="d-flex flex-column">
                 <div className="d-flex justify-content-between align-items-center mb-2">
                   <div className="d-flex align-items-center">
                     {account.icon}
                     <CardTitle tag="h5" className="ml-2 mb-0">{account.name}</CardTitle>
                   </div>
-                  <Button color="danger" size="sm" onClick={() => handleDisconnect(account.id)}>
+                  <Button color="danger" size="sm" onClick={() => handleDisconnect(account.id)} className="disconnect-btn">
                     <FaTimes />
                   </Button>
                 </div>
                 <CardText className="flex-grow-1 text-center">
-                  <img src={account.profilePicture} alt={account.name} className="rounded-circle mb-2" width="50" height="50" />
-                  <p>{account.followers.toLocaleString()} followers</p>
+                  <img src={account.profilePicture} alt={account.name} className="rounded-circle mb-2 profile-picture" width="50" height="50" />
+                  <p className="followers-count">{account.followers.toLocaleString()} followers</p>
                 </CardText>
               </CardBody>
             </Card>

@@ -1,11 +1,12 @@
 body {
-  background-image: url('https://saysmiss.files.wordpress.com/2022/03/sebastian-svenson-d2w-_1ljioq-unsplash.jpg');
+  background-image: url('https://saysmiss.files.wordpress.com/2022/03/sebastian-svenson-d2w-\_1ljioq-unsplash.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   margin: 0;
   padding: 0;
+  color: #ffffff;
 }
 
 .card {
@@ -13,12 +14,13 @@ body {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
   border-radius: 16px;
   margin-bottom: 20px;
-  background-color: rgba(0, 0, 0, 0.619);
-  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
   border: none;
   width: 100%;
   height: 100%;
   cursor: pointer;
+  color: #ffffff;
 }
 
 .card:hover {
@@ -26,21 +28,51 @@ body {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* styles.css */
 .sidebar {
+  position: fixed;
+  left: -250px; /* Initially hide the sidebar */
+  top: 0;
+  bottom: 0;
+  width: 250px;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
   color: #fff;
   box-shadow: 0 10px 20px rgb(0, 0, 0);
-  min-height: 100vh;
-  padding: 1rem;
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  left: 0; /* Show the sidebar when the "open" class is applied */
 }
 
 .sidebar .nav-link {
-  color: #fff;
+  color: #cccccc;
   transition: all 0.3s ease-in-out;
 }
 
 .sidebar .nav-link:hover {
-  color: #ffc107;
+  color: #ffffff;
   transform: translateX(5px);
+}
+
+.sidebar .nav-link.active {
+  background-color: #495057;
+  color: #ffffff;
+}
+
+.toggler {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1001;
 }
 
 .rounded-lg {
@@ -59,12 +91,6 @@ body {
   padding: 20px;
 }
 
-.sidebar-header {
-  padding: 20px;
-  text-align: center;
-  background-color: #212529;
-}
-
 .nav-link {
   color: #adb5bd;
   padding: 15px;
@@ -78,13 +104,14 @@ body {
 
 .nav-link.active {
   background-color: #495057;
-  color: #fff;
+  color: #ffffff;
 }
 
 .card .card-title {
   display: flex;
   align-items: center;
   font-size: 1.2rem;
+  color: #ffffff;
 }
 
 .card .card-title svg {
@@ -100,6 +127,7 @@ body {
 .card-text {
   font-size: 1rem;
   margin-bottom: 0;
+  color: #cccccc;
 }
 
 .card .badge {
@@ -110,10 +138,12 @@ body {
   background-color: #007bff;
   border: none;
   transition: background-color 0.3s;
+  color: #ffffff;
 }
 
 .btn-primary:hover {
   background-color: #0056b3;
+  color: #ffffff;
 }
 
 .custom-control-label::before,
@@ -127,26 +157,29 @@ body {
   border: none;
   border-radius: 0.5rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
 }
 
 .card-custom .card-body {
-  padding: 2rem;
+  padding: 1rem; /* Reduced padding for card bodies */
 }
 
 .card-custom .card-title {
-  font-size: 1.5rem;
+  font-size: 1.2rem; /* Reduced font size for card titles */
   font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .card-custom .card-text {
-  font-size: 1.25rem;
+  font-size: 1rem; /* Reduced font size for card text */
   font-weight: 400;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .card-custom .badge {
-  font-size: 1rem;
+  font-size: 0.9rem; /* Reduced font size for badges */
   font-weight: 600;
 }
