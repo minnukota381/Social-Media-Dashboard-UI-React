@@ -9,7 +9,7 @@ function Dashboard() {
     <div className="container-fluid p-4">
       <h1 className="mb-4">
         <FaFacebookSquare className="mr-2" />
-        Dashboard
+        Facebook
       </h1>
       <Row>
         <Col xs={12} sm={6} md={3}>
@@ -188,7 +188,7 @@ function Dashboard() {
           </Card>
         </Col>
       </Row>
-      <h1 className="mb-4 text-primary">Dashboard</h1>
+      <h1 className="mb-4 text-primary">Youtube</h1>
       <Row>
         <Col xs={12} sm={6} md={3}>
           <Card className="text-white mb-4 card-custom">
