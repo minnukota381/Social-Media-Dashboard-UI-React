@@ -14,7 +14,7 @@ body {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
   border-radius: 16px;
   margin-bottom: 20px;
-  background-color: rgba(0, 0, 0, 0.8);
+  background: linear-gradient(45deg, rgba(59, 89, 152, 0.8), rgba(0, 119, 181, 0.8), rgba(205, 32, 31, 0.8));
   backdrop-filter: blur(5px);
   border: none;
   width: 100%;
@@ -28,10 +28,9 @@ body {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* styles.css */
 .sidebar {
   position: fixed;
-  left: -250px; /* Initially hide the sidebar */
+  left: -250px;
   top: 0;
   bottom: 0;
   width: 250px;
@@ -44,7 +43,7 @@ body {
 }
 
 .sidebar.open {
-  left: 0; /* Show the sidebar when the "open" class is applied */
+  left: 0;
 }
 
 .sidebar .nav-link {
@@ -161,17 +160,21 @@ body {
 }
 
 .card-custom .card-body {
-  padding: 1rem; /* Reduced padding for card bodies */
+  padding: 1rem;
+  background: linear-gradient(135deg, rgba(59, 89, 152, 0.8), rgba(0, 119, 181, 0.8), rgba(205, 32, 31, 0.8));
+  border-radius: 0.5rem;
 }
 
 .card-custom .card-title {
-  font-size: 1.2rem; /* Reduced font size for card titles */
+  font-size: 1.2rem;
   font-weight: 600;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .card-custom .card-text {
-  font-size: 1rem; /* Reduced font size for card text */
+  font-size: 1rem;
   font-weight: 400;
   white-space: nowrap;
   overflow: hidden;
@@ -180,6 +183,9 @@ body {
 }
 
 .card-custom .badge {
-  font-size: 0.9rem; /* Reduced font size for badges */
+  font-size: 0.9rem;
   font-weight: 600;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
 }
