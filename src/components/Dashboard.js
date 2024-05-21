@@ -1,13 +1,14 @@
 // components/Dashboard.js
 import React from 'react';
 import { Card, CardBody, CardTitle, CardText, Row, Col, Badge } from 'reactstrap';
-import { FaUserFriends, FaRegCommentDots, FaHeart, FaRetweet, FaUserPlus, FaFacebookSquare, FaLinkedin } from 'react-icons/fa';
+import { FaUserFriends, FaRegCommentDots, FaHeart, FaRetweet, FaUserPlus, FaFacebookSquare, FaLinkedin, FaYoutube } from 'react-icons/fa';
 import './styles.css';
 
 function Dashboard() {
   return (
     <div className="container-fluid p-4">
-      <h1 className="mb-4">
+      {/* Facebook Section */}
+      <h1 className="mb-4 text-primary">
         <FaFacebookSquare className="mr-2" />
         Facebook
       </h1>
@@ -23,11 +24,11 @@ function Dashboard() {
                   </CardTitle>
                   <CardText>
                     <FaUserPlus className="mr-2" />
-                    8
+                    8,000
                   </CardText>
                 </div>
                 <Badge pill color="light" className="text-dark">
-                  +2
+                  +200
                 </Badge>
               </div>
             </CardBody>
@@ -40,7 +41,7 @@ function Dashboard() {
                 <div>
                   <CardTitle tag="h5">
                     <FaRegCommentDots className="mr-2" />
-                    Total Posts
+                    Posts
                   </CardTitle>
                   <CardText>
                     <FaUserPlus className="mr-2" />
@@ -61,7 +62,7 @@ function Dashboard() {
                 <div>
                   <CardTitle tag="h5">
                     <FaHeart className="mr-2" />
-                    Total Engagement
+                    Engagements
                   </CardTitle>
                   <CardText>
                     <FaUserPlus className="mr-2" />
@@ -82,7 +83,7 @@ function Dashboard() {
                 <div>
                   <CardTitle tag="h5">
                     <FaRetweet className="mr-2" />
-                    Total Shares
+                    Shares
                   </CardTitle>
                   <CardText>
                     <FaUserPlus className="mr-2" />
@@ -98,7 +99,8 @@ function Dashboard() {
         </Col>
       </Row>
 
-      <h1 className="mb-4">
+      {/* LinkedIn Section */}
+      <h1 className="mb-4 text-primary">
         <FaLinkedin className="mr-2" />
         LinkedIn
       </h1>
@@ -110,15 +112,15 @@ function Dashboard() {
                 <div>
                   <CardTitle tag="h5">
                     <FaUserFriends className="mr-2" />
-                    Followers
+                    Connections
                   </CardTitle>
                   <CardText>
                     <FaUserPlus className="mr-2" />
-                    8
+                    5,000
                   </CardText>
                 </div>
                 <Badge pill color="light" className="text-dark">
-                  +2
+                  +150
                 </Badge>
               </div>
             </CardBody>
@@ -131,15 +133,15 @@ function Dashboard() {
                 <div>
                   <CardTitle tag="h5">
                     <FaRegCommentDots className="mr-2" />
-                    Total Posts
+                    Posts
                   </CardTitle>
                   <CardText>
                     <FaUserPlus className="mr-2" />
-                    452
+                    120
                   </CardText>
                 </div>
                 <Badge pill color="light" className="text-primary">
-                  +24
+                  +12
                 </Badge>
               </div>
             </CardBody>
@@ -152,15 +154,15 @@ function Dashboard() {
                 <div>
                   <CardTitle tag="h5">
                     <FaHeart className="mr-2" />
-                    Total Engagement
+                    Likes
                   </CardTitle>
                   <CardText>
                     <FaUserPlus className="mr-2" />
-                    24,568
+                    15,300
                   </CardText>
                 </div>
                 <Badge pill color="light" className="text-danger">
-                  +1.2k
+                  +1.1k
                 </Badge>
               </div>
             </CardBody>
@@ -173,22 +175,27 @@ function Dashboard() {
                 <div>
                   <CardTitle tag="h5">
                     <FaRetweet className="mr-2" />
-                    Total Shares
+                    Shares
                   </CardTitle>
                   <CardText>
                     <FaUserPlus className="mr-2" />
-                    1,234
+                    800
                   </CardText>
                 </div>
                 <Badge pill color="light" className="text-info">
-                  +100
+                  +50
                 </Badge>
               </div>
             </CardBody>
           </Card>
         </Col>
       </Row>
-      <h1 className="mb-4 text-primary">Youtube</h1>
+
+      {/* YouTube Section */}
+      <h1 className="mb-4 text-primary">
+        <FaYoutube className="mr-2" />
+        YouTube
+      </h1>
       <Row>
         <Col xs={12} sm={6} md={3}>
           <Card className="text-white mb-4 card-custom">
@@ -197,15 +204,15 @@ function Dashboard() {
                 <div>
                   <CardTitle tag="h5">
                     <FaUserFriends className="mr-2" />
-                    Followers
+                    Subscribers
                   </CardTitle>
                   <CardText>
                     <FaUserPlus className="mr-2" />
-                    8
+                    10,000
                   </CardText>
                 </div>
                 <Badge pill color="light" className="text-dark">
-                  +2
+                  +500
                 </Badge>
               </div>
             </CardBody>
@@ -218,15 +225,15 @@ function Dashboard() {
                 <div>
                   <CardTitle tag="h5">
                     <FaRegCommentDots className="mr-2" />
-                    Total Posts
+                    Videos
                   </CardTitle>
                   <CardText>
                     <FaUserPlus className="mr-2" />
-                    452
+                    320
                   </CardText>
                 </div>
                 <Badge pill color="light" className="text-primary">
-                  +24
+                  +15
                 </Badge>
               </div>
             </CardBody>
@@ -239,15 +246,15 @@ function Dashboard() {
                 <div>
                   <CardTitle tag="h5">
                     <FaHeart className="mr-2" />
-                    Total Engagement
+                    Likes
                   </CardTitle>
                   <CardText>
                     <FaUserPlus className="mr-2" />
-                    24,568
+                    50,000
                   </CardText>
                 </div>
                 <Badge pill color="light" className="text-danger">
-                  +1.2k
+                  +2.5k
                 </Badge>
               </div>
             </CardBody>
@@ -260,109 +267,21 @@ function Dashboard() {
                 <div>
                   <CardTitle tag="h5">
                     <FaRetweet className="mr-2" />
-                    Total Shares
+                    Shares
                   </CardTitle>
                   <CardText>
                     <FaUserPlus className="mr-2" />
-                    1,234
+                    4,000
                   </CardText>
                 </div>
                 <Badge pill color="light" className="text-info">
-                  +100
+                  +200
                 </Badge>
               </div>
             </CardBody>
           </Card>
         </Col>
       </Row>
-      <h1 className="mb-4 text-primary">Dashboard</h1>
-      <Row>
-        <Col xs={12} sm={6} md={3}>
-          <Card className="text-white mb-4 card-custom">
-            <CardBody>
-              <div className="d-flex justify-content-between align-items-center">
-                <div>
-                  <CardTitle tag="h5">
-                    <FaUserFriends className="mr-2" />
-                    Followers
-                  </CardTitle>
-                  <CardText>
-                    <FaUserPlus className="mr-2" />
-                    8
-                  </CardText>
-                </div>
-                <Badge pill color="light" className="text-dark">
-                  +2
-                </Badge>
-              </div>
-            </CardBody>
-          </Card>
-        </Col>
-        <Col xs={12} sm={6} md={3}>
-          <Card className="text-white mb-4 card-custom">
-            <CardBody>
-              <div className="d-flex justify-content-between align-items-center">
-                <div>
-                  <CardTitle tag="h5">
-                    <FaRegCommentDots className="mr-2" />
-                    Total Posts
-                  </CardTitle>
-                  <CardText>
-                    <FaUserPlus className="mr-2" />
-                    452
-                  </CardText>
-                </div>
-                <Badge pill color="light" className="text-primary">
-                  +24
-                </Badge>
-              </div>
-            </CardBody>
-          </Card>
-        </Col>
-        <Col xs={12} sm={6} md={3}>
-          <Card className="text-white mb-4 card-custom">
-            <CardBody>
-              <div className="d-flex justify-content-between align-items-center">
-                <div>
-                  <CardTitle tag="h5">
-                    <FaHeart className="mr-2" />
-                    Total Engagement
-                  </CardTitle>
-                  <CardText>
-                    <FaUserPlus className="mr-2" />
-                    24,568
-                  </CardText>
-                </div>
-                <Badge pill color="light" className="text-danger">
-                  +1.2k
-                </Badge>
-              </div>
-            </CardBody>
-          </Card>
-        </Col>
-        <Col xs={12} sm={6} md={3}>
-          <Card className="text-white mb-4 card-custom">
-            <CardBody>
-              <div className="d-flex justify-content-between align-items-center">
-                <div>
-                  <CardTitle tag="h5">
-                    <FaRetweet className="mr-2" />
-                    Total Shares
-                  </CardTitle>
-                  <CardText>
-                    <FaUserPlus className="mr-2" />
-                    1,234
-                  </CardText>
-                </div>
-                <Badge pill color="light" className="text-info">
-                  +100
-                </Badge>
-              </div>
-            </CardBody>
-          </Card>
-        </Col>
-      </Row>
-      
     </div>
   );
 }
