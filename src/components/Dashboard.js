@@ -28,7 +28,7 @@ const SocialCard = ({ icon, title, value, growth, growthColor }) => (
 
 const SocialSection = ({ platform, icon, cards }) => (
   <>
-    <h1 className="mb-4 text-primary">
+    <h1 className="mb-4">
       {icon}
       {platform}
     </h1>
