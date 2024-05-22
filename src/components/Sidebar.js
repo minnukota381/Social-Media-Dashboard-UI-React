@@ -1,12 +1,14 @@
 import React from 'react';
 
 const Sidebar = ({ open, closeSidebar }) => (
-  <aside id="sidebar" className={open ? 'sidebar-responsive' : ''}>
+  <aside id="sidebar" className={`${open ? 'sidebar-responsive' : ''} sidebar`}>
     <div className="sidebar-title">
       <div className="sidebar-brand">
         <span className="material-icons-outlined">mood</span>NEPTUNE
       </div>
-      <span className="material-icons-outlined" onClick={closeSidebar}>close</span>
+      <span className="material-icons-outlined sidebar-close" onClick={closeSidebar}>
+        close
+      </span>
     </div>
     <ul className="sidebar-list">
       <li className="sidebar-list-item">

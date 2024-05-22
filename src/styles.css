@@ -11,10 +11,14 @@ body {
   vertical-align: middle;
   line-height: 1px;
   font-size: 30px;
+  padding: 5px;
 }
 
 .text-secondary {
   color: rgb(70, 71, 81);
+}
+.dark-mode .text-secondary{
+  color: #fff;
 }
 
 .text-twitter {
@@ -61,18 +65,66 @@ body {
 
 /* ---------- HEADER ---------- */
 
+/* Header */
 .header {
-  grid-area: header;
-  height: 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 30px 0 30px;
-  box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
+  padding: 10px 20px;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.menu-icon {
-  display: none;
+.header-left,
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.dark-mode-toggle {
+  cursor: pointer;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #000000;
+  color: #fff;
+}
+
+.dark-mode .header {
+  background-color: #000000;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.664);
+}
+
+.dark-mode .search-input {
+  background-color: #ffffff;
+  color: #fff;
+  border-color: #666;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.top-right-icons {
+  display: flex;
+  align-items: center;
+}
+
+.top-right-icons .material-icons-outlined {
+  margin-left: 10px;
+  cursor: pointer;
 }
 
 /* ---------- SIDEBAR ---------- */
@@ -86,7 +138,9 @@ body {
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
 }
-
+.dark-mode #sidebar{
+  background-color: #001c2e;
+}
 .sidebar-title {
   display: flex;
   justify-content: space-between;
@@ -95,8 +149,9 @@ body {
   margin-bottom: 30px;
 }
 
-.sidebar-title > span {
+.sidebar-close {
   display: none;
+  cursor: pointer;
 }
 
 .sidebar-brand {
@@ -164,7 +219,11 @@ body {
   border-radius: 30px;
   box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
 }
-
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+  transition: all 0.2s ease-in-out;
+}
 .card-inner {
   display: flex;
   align-items: center;
@@ -188,7 +247,10 @@ body {
   border-radius: 30px;
   box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
 }
-
+.dark-mode .product-card{
+  background-color: #2d2d2d;
+  color: #fff;
+}
 .product-description {
   padding-top: 50px;
 }
@@ -221,7 +283,10 @@ body {
   border-radius: 30px;
   box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
 }
-
+.dark-mode .social-media{
+  background-color: #3e3e3e;
+  color: #ffffff !important;
+}
 .social-media .product {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -240,7 +305,6 @@ body {
   color: rgb(255, 255, 255);
   margin-bottom: 15px;
 }
-
 /* ---------- ANALYTICS ---------- */
 
 .analytics {
@@ -250,10 +314,20 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.dark-mode .analytics {
+  background-color: #343434;
+  color: #fff;
+  box-shadow: 0 2px 4px rgb(255, 255, 255);
+}
+
 .analytics-title {
   font-size: 24px;
   color: #333;
   margin-bottom: 20px;
+}
+
+.dark-mode .analytics-title {
+  color: #fff;
 }
 
 .analytics-content {
@@ -265,8 +339,24 @@ body {
 .platform-card {
   background-color: #fff;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000000;
+  border-radius: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.36);
+}
+.platform-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+  transition: all 0.2s ease-in-out;
+}
+
+.dark-mode .platform-card {
+  background-color: #252525;
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
 }
 
 .platform-title {
@@ -275,12 +365,19 @@ body {
   margin-bottom: 10px;
 }
 
+.dark-mode .platform-title {
+  color: #fff;
+}
+
 .platform-stats {
   font-size: 16px;
   color: #666;
   margin-bottom: 5px;
 }
 
+.dark-mode .platform-stats {
+  color: #ccc;
+}
 
 /* ---------- MEDIA QUERIES ---------- */
 
@@ -335,6 +432,7 @@ body {
     height: 100%;
     z-index: 99;
     margin-left: -260px;
+    background-color: #333;
   }
 
   .sidebar-title > span {
