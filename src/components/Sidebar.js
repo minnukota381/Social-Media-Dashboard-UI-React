@@ -16,17 +16,12 @@ const Sidebar = ({ open, closeSidebar }) => (
       </li>
       <li className="sidebar-list-item">
         <a href="#">
-          <span className="material-icons-outlined">person</span> Users
+          <span className="material-icons-outlined">person</span> Followers
         </a>
       </li>
       <li className="sidebar-list-item">
         <a href="#">
-          <span className="material-icons-outlined">receipt</span> Orders
-        </a>
-      </li>
-      <li className="sidebar-list-item">
-        <a href="#">
-          <span className="material-icons-outlined">inventory</span> Products
+          <span className="material-icons-outlined">inventory</span> Posts
         </a>
       </li>
       <li className="sidebar-list-item">

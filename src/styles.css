@@ -241,6 +241,47 @@ body {
   margin-bottom: 15px;
 }
 
+/* ---------- ANALYTICS ---------- */
+
+.analytics {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.analytics-title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.analytics-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.platform-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.platform-title {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.platform-stats {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+
 /* ---------- MEDIA QUERIES ---------- */
 
 @media only screen and (max-width: 1200px) {
