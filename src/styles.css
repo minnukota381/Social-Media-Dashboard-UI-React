@@ -26,7 +26,7 @@ body {
 }
 
 .text-instagram {
-  color: #C13584;
+  color: #E1306C;
 }
 
 .background-instagram {
@@ -80,7 +80,7 @@ body {
 #sidebar {
   grid-area: sidebar;
   height: 100%;
-  background-color: rgb(0, 36, 114);
+  background-color: rgb(29, 38, 154);
   color: rgb(255, 255, 255);
   overflow-y: auto;
   transition: all 0.5s;
@@ -165,29 +165,13 @@ body {
   box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
 }
 
-.card:first-child {
-  background-color: #1DA1F2;
-}
-
-.card:nth-child(2) {
-  background-color: #E1306C;
-}
-
-.card:nth-child(3) {
-  background-color: #4267B2;
-}
-
-.card:nth-child(4) {
-  background-color: #0077B5;
-}
-
 .card-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.card-inner > span {
+.card-inner > i {
   font-size: 50px;
 }
 
