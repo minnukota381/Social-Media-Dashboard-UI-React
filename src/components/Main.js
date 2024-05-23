@@ -53,6 +53,9 @@ const Main = () => {
         <ProductCard />
       </div>
       <Analytics />
+      <footer className="footer">
+        <p>Created by @minnukota381</p>
+      </footer>
     </main>
   );
 };
