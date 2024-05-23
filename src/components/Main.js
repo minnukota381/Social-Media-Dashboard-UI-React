@@ -3,6 +3,7 @@ import Card from './Card';
 import ProductCard from './ProductCard';
 import SocialMediaCard from './SocialMediaCard';
 import Analytics from './Analytics';
+import profilePic from '../Assets/minnu.JPG'; // Adjust the import path if necessary
 
 const Main = () => {
   const cardData = [
@@ -34,9 +35,13 @@ const Main = () => {
 
   return (
     <main className="main-container">
-      <div className="main-title">
-        <h2>DASHBOARD</h2>
-      </div>
+      <header className="header">
+        <h1 className="header-title">Social Media Dashboard</h1>
+        <div className="header-user">
+          <img src={profilePic} alt="User" className="user-avatar" />
+          <button className="logout-button">Logout</button>
+        </div>
+      </header>
       <div className="main-cards">
         {cardData.map((data, index) => (
           <Card
@@ -55,6 +60,11 @@ const Main = () => {
       <Analytics />
       <footer className="footer">
         <p>Created by @minnukota381</p>
+        <div className="footer-social">
+          <a href="https://twitter.com/minnukota381" target="_blank" rel="noopener noreferrer">Twitter</a>
+          <a href="https://github.com/minnukota381" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://linkedin.com/in/minnukota381" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
       </footer>
     </main>
   );

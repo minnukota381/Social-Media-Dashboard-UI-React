@@ -20,7 +20,7 @@ const Analytics = () => {
       },
       {
         label: 'Likes',
-        data: [1200, 3000, 5000, 800],
+        data: [1200, 1467, 1576, 800],
         backgroundColor: ['#1DA1F277', '#E1306C77', '#FF000077', '#0077B577'],
       },
     ],
@@ -42,28 +42,28 @@ const Analytics = () => {
         <div className="platform-card">
           <FontAwesomeIcon icon={faTwitter} size="3x" color="#1DA1F2" />
           <h3 className="platform-title">Twitter</h3>
-          <p className="platform-stats">Posts: 500</p>
+          <p className="platform-stats">Posts: 348</p>
           <p className="platform-stats">Engagement: 25%</p>
           <p className="platform-stats">Likes: 1,200</p>
         </div>
         <div className="platform-card">
           <FontAwesomeIcon icon={faInstagram} size="3x" color="#E1306C" />
           <h3 className="platform-title">Instagram</h3>
-          <p className="platform-stats">Posts: 1000</p>
+          <p className="platform-stats">Posts: 768</p>
           <p className="platform-stats">Engagement: 30%</p>
-          <p className="platform-stats">Likes: 3,000</p>
+          <p className="platform-stats">Likes: 1,467</p>
         </div>
         <div className="platform-card">
           <FontAwesomeIcon icon={faYoutube} size="3x" color="#FF0000" />
           <h3 className="platform-title">YouTube</h3>
-          <p className="platform-stats">Videos: 300</p>
+          <p className="platform-stats">Videos: 321</p>
           <p className="platform-stats">Engagement: 45%</p>
-          <p className="platform-stats">Likes: 5,000</p>
+          <p className="platform-stats">Likes: 1,576</p>
         </div>
         <div className="platform-card">
           <FontAwesomeIcon icon={faLinkedin} size="3x" color="#0077B5" />
           <h3 className="platform-title">LinkedIn</h3>
-          <p className="platform-stats">Posts: 200</p>
+          <p className="platform-stats">Posts: 256</p>
           <p className="platform-stats">Engagement: 15%</p>
           <p className="platform-stats">Likes: 800</p>
         </div>
