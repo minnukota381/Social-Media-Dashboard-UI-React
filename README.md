@@ -33,23 +33,24 @@ To get a local copy up and running, follow these steps:
 
 ```
 cd social-media-dashboard
-``  
+```  
 
 3. Install dependencies:
+
 ```
 npm install
 ```
-4. Start the development server:
 
-Run the application:
-
-bash
-Copy code
+4. Run the application:
+```
 npm start
+```
 Open your browser and navigate to http://localhost:3000 to view the application.
 
-Usage
-Navbar
+## Usage
+
+## Navbar
+
 Dashboard: Overview of social media metrics.
 Followers: Manage and view your followers.
 Posts: Create and manage your posts.
