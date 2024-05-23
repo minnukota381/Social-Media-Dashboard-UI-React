@@ -18,11 +18,11 @@ const SocialMediaCard = () => (
         <p className="text-secondary">Increased engagement on Instagram posts.</p>
       </div>
       <div>
-        <div className="product-icon background-facebook">
-          <i className="bi bi-facebook"></i>
+        <div className="product-icon background-youtube">
+          <i className="bi bi-youtube"></i>
         </div>
-        <h1 className="text-facebook">-126</h1>
-        <p className="text-secondary">Decrease in page likes on Facebook.</p>
+        <h1 className="text-youtube">+500</h1>
+        <p className="text-secondary">New subscribers on YouTube this month.</p>
       </div>
       <div>
         <div className="product-icon background-linkedin">
