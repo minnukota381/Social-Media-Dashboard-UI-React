@@ -76,7 +76,7 @@ const Analytics = () => {
 
   return (
     <div className="analytics">
-      <h2 className="analytics-title">Social Media Analytics</h2>
+      <h2 className="analytics-title">Analytics</h2>
       <div className="analytics-content">
         <div className="platform-card">
           <FontAwesomeIcon icon={faTwitter} size="3x" color="#1DA1F2" />
