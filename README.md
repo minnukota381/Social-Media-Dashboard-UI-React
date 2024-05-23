@@ -47,13 +47,3 @@ npm start
 ```
 Open your browser and navigate to http://localhost:3000 to view the application.
 
-## Usage
-
-## Navbar
-
-Dashboard: Overview of social media metrics.
-Followers: Manage and view your followers.
-Posts: Create and manage your posts.
-Settings: Customize your account settings.
-Dark Mode Toggle
-Click on the sun/moon icon to toggle between dark mode and light mode.
