@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BiHome, BiUser, BiBell, BiEnvelope, BiCog, BiBook } from 'react-icons/bi';
+import { BiHome,BiCog, BiBook } from 'react-icons/bi';
 import { FaUserFriends } from 'react-icons/fa';
 import profilePic from '../Assets/minnu.JPG';
 
