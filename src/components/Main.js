@@ -3,7 +3,7 @@ import Card from './Card';
 import ProductCard from './ProductCard';
 import SocialMediaCard from './SocialMediaCard';
 import Analytics from './Analytics';
-import profilePic from '../Assets/minnu.JPG'; // Adjust the import path if necessary
+import profilePic from '../Assets/minnu.JPG';
 
 const Main = () => {
   const cardData = [

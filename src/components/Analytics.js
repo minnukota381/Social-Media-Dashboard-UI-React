@@ -1,11 +1,11 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faInstagram, faYoutube, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { Bar } from 'react-chartjs-2';
+import { Bar, Line } from 'react-chartjs-2';
 import 'chart.js/auto';
 
 const Analytics = () => {
-  const data = {
+  const barData = {
     labels: ['Twitter', 'Instagram', 'YouTube', 'LinkedIn'],
     datasets: [
       {
@@ -26,7 +26,46 @@ const Analytics = () => {
     ],
   };
 
-  const options = {
+  const lineData = {
+    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+    datasets: [
+      {
+        label: 'Twitter Followers',
+        data: [10000, 12000, 15000, 18000, 20000, 22000, 25000, 28000, 30000, 33000, 35000, 38000],
+        borderColor: '#1DA1F2',
+        fill: false,
+      },
+      {
+        label: 'Instagram Followers',
+        data: [15000, 18000, 22000, 25000, 28000, 30000, 33000, 36000, 39000, 42000, 45000, 48000],
+        borderColor: '#E1306C',
+        fill: false,
+      },
+      {
+        label: 'YouTube Subscribers',
+        data: [8000, 10000, 12000, 15000, 18000, 20000, 23000, 26000, 29000, 32000, 35000, 38000],
+        borderColor: '#FF0000',
+        fill: false,
+      },
+      {
+        label: 'LinkedIn Followers',
+        data: [5000, 7000, 9000, 11000, 13000, 15000, 17000, 19000, 21000, 23000, 25000, 27000],
+        borderColor: '#0077B5',
+        fill: false,
+      },
+    ],
+  };
+
+  const barOptions = {
+    responsive: true,
+    scales: {
+      y: {
+        beginAtZero: true,
+      },
+    },
+  };
+
+  const lineOptions = {
     responsive: true,
     scales: {
       y: {
@@ -69,7 +108,10 @@ const Analytics = () => {
         </div>
       </div>
       <div className="analytics-graph">
-        <Bar data={data} options={options} />
+        <Bar data={barData} options={barOptions} />
+      </div>
+      <div className="analytics-graph">
+        <Line data={lineData} options={lineOptions} />
       </div>
     </div>
   );

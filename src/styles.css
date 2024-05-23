@@ -247,7 +247,7 @@ body {
   font-size: 50px;
 }
 .card-icon {
-  margin-right: 10px; /* Add this line for spacing between icon and title */
+  margin-right: 10px;
 }
 .header-title {
   font-size: 24px;
