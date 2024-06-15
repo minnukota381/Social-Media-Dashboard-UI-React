@@ -26,13 +26,13 @@ To get a local copy up and running, follow these steps:
 1. **Clone the repository:**
 
    ```
-   git clone https://github.com/minnukota381/social-media-dashboard.git
+   git clone https://github.com/minnukota381/social-media-dashboard-react.git
    ```
 
 2. **Navigate to the project directory:**
 
 ```
-cd social-media-dashboard
+cd social-media-dashboard-react
 ```  
 
 3. Install dependencies:
