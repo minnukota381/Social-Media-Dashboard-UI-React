@@ -24,7 +24,7 @@
     "reactstrap": "^9.2.3",
     "recharts": "^2.13.0",
     "styled-components": "^6.1.13",
-    "web-vitals": "^4.2.3"
+    "web-vitals": "^4.2.4"
   },
   "scripts": {
     "start": "react-scripts start",
