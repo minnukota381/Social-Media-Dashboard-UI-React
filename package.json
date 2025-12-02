@@ -22,7 +22,7 @@
     "react-router-dom": "^7.9.6",
     "react-scripts": "5.0.1",
     "reactstrap": "^9.2.3",
-    "recharts": "^3.3.0",
+    "recharts": "^3.5.0",
     "styled-components": "^6.1.19",
     "web-vitals": "^5.1.0"
   },
