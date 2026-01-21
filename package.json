@@ -23,7 +23,7 @@
     "react-scripts": "5.0.1",
     "reactstrap": "^9.2.3",
     "recharts": "^3.6.0",
-    "styled-components": "^6.3.5",
+    "styled-components": "^6.3.8",
     "web-vitals": "^5.1.0"
   },
   "scripts": {
